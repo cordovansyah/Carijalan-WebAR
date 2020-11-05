@@ -21,7 +21,7 @@
     });
 </script>   
 <body style='margin: 0; overflow: hidden;'>
-    <a-scene
+    <!-- <a-scene
         cursor='rayOrigin: mouse; fuse: true; fuseTimeout: 0;'
         raycaster="objects: [clickhandler];"
         vr-mode-ui="enabled: false"
@@ -37,5 +37,26 @@
 
         <a-camera gps-camera rotation-reader>
 		</a-camera>
-	</a-scene>
+    </a-scene> -->
+    
+    <a-scene
+    vr-mode-ui="enabled: false"
+    embedded
+    arjs='sourceType: webcam; debugUIEnabled: false;'>
+
+    <!-- too near, is like 2m far -->
+    <a-box material="color: red;" scale="15 15 15" gps-entity-place="latitude: 44.504493; longitude: 11.301134;"></a-box>
+
+    <!-- visible, is like 400m far -->
+    <a-box material="color: yellow;" scale="15 15 15" gps-entity-place="latitude: 44.506477; longitude: 11.301524;"></a-box>
+
+    <!-- too far, is like 2.5km far -->
+    <a-box material="color: green;" scale="15 15 15" gps-entity-place="latitude: 44.500013; longitude: 11.277351;"></a-box>
+
+        <a-camera
+            rotation-reader
+            gps-camera="simulateLatitude: 44.504348; simulateLongitude: 11.301027; minDistance: 50; maxDistance: 700;"
+        >
+        </a-camera>
+    </a-scene>
 </body>
