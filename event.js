@@ -25,7 +25,7 @@
 //     }
 // });
 
-var buttonInteraction = document.querySelector('#buttonclicked')
+var buttonInteraction = document.getElementById('#buttonclicked')
 buttonInteraction.addEventListener('click', () => {
     window.location = 'https://github.com/cordovansyah/Carijalan-WebAR';
     console.log('component is clicked')
