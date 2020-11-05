@@ -10,7 +10,7 @@
     </head>
 
     <script>
-        AFRAME.registerComponent('change-color-on-hover', {
+        AFRAME.registerComponent('change-color-on-click', {
           schema: {
             color: {default: 'red'}
           },
@@ -35,8 +35,7 @@
     <a-scene>
 
         <a-box
-        color="#EF2D5E" position="0 1 -4" change-color-on-hover="color: blue"
-        material="color: green;"
+        color="#EF2D5E" change-color-on-click="color: blue"
         scale="50 50 50"
         gps-entity-place="latitude: -6.9196366; longitude: 107.6128055;">
     </a-box>
