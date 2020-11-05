@@ -15,18 +15,20 @@
 //         });
 // }});
 
-// AFRAME.registerComponent('clickhandler', {
-//     //Init Function
-//     init: function(){
-//         //Cursor Component
-//         this.el.addEventListener('click', () => {
-//             alert('Carijalan UI interaction works!');
-//         });
-//     }
-// });
+AFRAME.registerComponent('clickhandler', {
+    //Init Function
+    init: function(){
+        //Cursor Component
+        this.el.addEventListener('click', () => {
+            alert('Carijalan UI interaction works!');
+            console.log('component is clicked');
+            window.location = 'https://github.com/cordovansyah/Carijalan-WebAR';
+        });
+    }
+});
 
-var buttonInteraction = document.getElementById('#buttonclicked')
-buttonInteraction.addEventListener('click', () => {
-    window.location = 'https://github.com/cordovansyah/Carijalan-WebAR';
-    console.log('component is clicked')
-})
+// var buttonInteraction = document.getElementById('#buttonclicked')
+// buttonInteraction.addEventListener('click', () => {
+//     window.location = 'https://github.com/cordovansyah/Carijalan-WebAR';
+//     console.log('component is clicked')
+// })
