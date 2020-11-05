@@ -13,14 +13,14 @@
 
 <body style='margin: 0; overflow: hidden;'>
     <a-scene
-        cursor='rayOrigin: mouse; fuse: false; fuseTimeout: 0;'
+        cursor='rayOrigin: mouse; fuse: true;'
         raycaster="objects: [clickhandler];"
         vr-mode-ui="enabled: false"
 		embedded
         arjs='sourceType: webcam; debugUIEnabled: false;'>
         
         <a-box
-            clickhandler
+            id="buttonclicked"
             material="color: green;"
             scale="20 20 20"
             gps-entity-place="latitude: -6.9196366; longitude: 107.6128055;">
