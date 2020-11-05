@@ -8,44 +8,6 @@
         <script src="https://unpkg.com/aframe-look-at-component@0.8.0/dist/aframe-look-at-component.min.js"></script>
         <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
     </head>
-
-    <script>
-        AFRAME.registerComponent('change-color-on-click', {
-          schema: {
-            color: {default: 'red'}
-          },
-      
-          init: function () {
-            var data = this.data;
-            var el = this.el;  // <a-box>
-            var defaultColor = el.getAttribute('material').color;
-      
-            el.addEventListener('mouseenter', function () {
-              el.setAttribute('color', data.color);
-            });
-      
-            el.addEventListener('mouseleave', function () {
-              el.setAttribute('color', defaultColor);
-            });
-          }
-        });
-      </script>
-
-<body style='margin: 0; overflow: hidden;'>
-    <a-scene>
-
-        <a-box
-        color="#EF2D5E" change-color-on-click="color: blue"
-        scale="50 50 50"
-        gps-entity-place="latitude: -6.9196366; longitude: 107.6128055;">
-    </a-box>
-        <!-- <a-text clickhandler value="Carijalan" look-at="[gps-camera]" scale="75 75 75"
-        gps-entity-place="latitude: -6.9196366; longitude: 107.6128055;"></a-text> -->
-        <!-- <a-camera gps-camera rotation-reader></a-camera> -->
-        <a-camera><a-cursor></a-cursor></a-camera>
-	</a-scene>
-</body>
-
 <!-- 
 <body style='margin: 0; overflow: hidden;'>
     <a-scene
@@ -66,3 +28,18 @@
 		</a-camera>
     </a-scene>
 </body> -->
+
+<script src="event.js"></script>
+
+<body style='margin: 0; overflow: hidden;'>
+    <a-scene
+        vr-mode-ui="enabled: false"
+		embedded
+		arjs='sourceType: webcam; sourceWidth:1280; sourceHeight:960; displayWidth: 1280; displayHeight: 960; debugUIEnabled: false;'>
+
+        <a-text clickhandler value="Carijalan" look-at="[gps-camera]" scale="75 75 75"
+        gps-entity-place="latitude: -6.9196366; longitude: 107.6128055;"></a-text>
+        <a-camera gps-camera rotation-reader>
+		</a-camera>
+	</a-scene>
+</body>
