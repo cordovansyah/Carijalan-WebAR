@@ -20,7 +20,7 @@ AFRAME.registerComponent('clickhandler', {
     init: function(){
         //Cursor Component
         this.el.addEventListener('click', () => {
-            window.location = 'https://github.com/cordovansyah/Carijalan-WebAR';
+            alert('Carijalan UI interaction works!');
         });
     }
 });
