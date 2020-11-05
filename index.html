@@ -4,12 +4,18 @@
         <meta charset='utf-8'>
         <meta http-equiv='X-UA-Compatible' content='IE=edge'>
         <title>Carijalan Demo 1.0</title>
-        <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
-        <script src="https://unpkg.com/aframe-look-at-component@0.8.0/dist/aframe-look-at-component.min.js"></script>
-        <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
+        <scrip src="https://aframe.io/releases/1.0.4/aframe.min.js"></scrip>
+        <scrip src="https://unpkg.com/aframe-look-at-component@0.8.0/dist/aframe-look-at-component.min.js"></scrip>
+        <scrip src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></scrip>
     </head>
 
-<script src="event.js"></script>
+<script>
+    var buttonInteraction = document.querySelector('#buttonclicked')
+buttonInteraction.addEventListener('click', () => {
+    window.location = 'https://github.com/cordovansyah/Carijalan-WebAR';
+    console.log('component is clicked')
+})
+</script>
 
 <body style='margin: 0; overflow: hidden;'>
     <a-scene
