@@ -15,14 +15,3 @@
 //         });
 // }});
 
-AFRAME.registerComponent('clickhandler', {
-    //Init Function
-    init: function(){
-        //Cursor Component
-        this.el.addEventListener('click', () => {
-            alert('Carijalan UI interaction works!');
-            console.log('component is clicked');
-            window.location = 'https://github.com/cordovansyah/Carijalan-WebAR';
-        });
-    }
-});
