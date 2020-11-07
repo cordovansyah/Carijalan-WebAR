@@ -1,53 +1,29 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset='utf-8'>
-        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-        <title>Carijalan Demo 1.0</title>
-        <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
-        <script src="https://unpkg.com/aframe-look-at-component@0.8.0/dist/aframe-look-at-component.min.js"></script>
-        <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
-        <script src="event.js"></script>
-    </head>
-
-<body style='margin: 0; overflow: hidden;'>
-    <a-scene
-        vr-mode-ui="enabled: false"
-		embedded
-		arjs='sourceType: webcam; sourceWidth:1280; sourceHeight:960; displayWidth: 1280; displayHeight: 960; debugUIEnabled: false;'>
-
-        <a-box id="target" material="color: red;" scale="15 15 15" gps-entity-place="latitude: -6.9196366; longitude: 107.6128055;"></a-box>
-        <a-camera gps-camera rotation-reader>
-		</a-camera>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <title>Carijalan WebXR</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="foo.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.0/dist/aframe-extras.min.js"></script>
+</head>
+<body>
+    <a-scene>
+        <a-box color="blue" depth="0.5" height="0.5" width="0.5" position="0 0 -4"></a-box>
+        <!-- <a-entity foo="bar: 5; baz: bazValue"></a-entity> -->
+        <!-- 3D Models -->
+        <a-scene>
+            <a-assets>
+              <a-asset-item id="animal_ninja" position="0 0 -3" src="/Assets/animal_ninja/scene.gltf" response-type="arraybuffer"></a-asset-item>
+            </a-assets>
+            <a-entity gltf-model="#animal_ninja"></a-entity>
+           </a-scene>
     </a-scene>
 
-    <a-scene
-    vr-mode-ui="enabled: false"
-		embedded
-		arjs='sourceType: webcam; sourceWidth:1280; sourceHeight:960; displayWidth: 1280; displayHeight: 960; debugUIEnabled: false;'>
-    <a-text id ="target" value="Carijalan" scale="75 75 75" gps-entity-place="latitude: -6.9196366; longitude: 107.6128055;"></a-text>
-    </a-scene>
+    <div class="glitchButton" style="position: fixed; top:20px; right:20px;"></div>
+    <script src="https:button.glitch.me/button.js" defer></script>
+    
 </body>
-
-
-
-<!-- 
-<body style='margin: 0; overflow: hidden;'>
-    <a-scene
-        cursor='rayOrigin: mouse; fuse: true;'
-        raycaster="objects: [clickhandler];"
-        vr-mode-ui="enabled: false"
-		embedded
-        arjs='sourceType: webcam; debugUIEnabled: false;'>
-        
-        <a-box
-            clickhandler
-            material="color: green;"
-            scale="20 20 20"
-            gps-entity-place="latitude: -6.9196366; longitude: 107.6128055;">
-        </a-box>
-
-        <a-camera gps-camera rotation-reader>
-		</a-camera>
-    </a-scene>
-</body> -->
+</html>
