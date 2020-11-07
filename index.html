@@ -16,12 +16,17 @@
 		embedded
 		arjs='sourceType: webcam; sourceWidth:1280; sourceHeight:960; displayWidth: 1280; displayHeight: 960; debugUIEnabled: false;'>
 
-        <a-box id="target" material="color: red;" look-at="[gps-camera]" scale="75 75 75" gps-entity-place="latitude: -6.9196366; longitude: 107.6128055;"></a-box>
-        <a-text id ="target" value="This will always face the user." look-at="[gps-camera]" scale="75 75 75"
-        gps-entity-place="latitude: your-latitude>; longitude: your-longitude;"></a-text>
+        <a-box id="target" material="color: red;" scale="75 75 75" gps-entity-place="latitude: -6.9196366; longitude: 107.6128055;"></a-box>
         <a-camera gps-camera rotation-reader>
 		</a-camera>
-	</a-scene>
+    </a-scene>
+
+    <a-scene
+    vr-mode-ui="enabled: false"
+		embedded
+		arjs='sourceType: webcam; sourceWidth:1280; sourceHeight:960; displayWidth: 1280; displayHeight: 960; debugUIEnabled: false;'>
+    <a-text id ="target" value="Carijalan" scale="75 75 75" gps-entity-place="latitude: your-latitude>; longitude: your-longitude;"></a-text>
+    </a-scene>
 </body>
 
 <!-- 
