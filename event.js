@@ -1,7 +1,10 @@
-var targetEl = document.querySelector('#target');
-targetEl.addEventListener('click', function() {
-  targetEl.setAttribute('material', {color: 'red'});
-});
+window.onload = function(){
+    var targetEl = document.querySelector('#target');
+    targetEl.addEventListener('click', function() {
+      targetEl.setAttribute('material', {color: 'red'});
+    });
+}
+
 
 
 // AFRAME.registerComponent('markerhandler', {
